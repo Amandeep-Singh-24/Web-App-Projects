@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "../css/style.css">
+    <title>View Post</title>
+</head>
+<body>
+    <div class = "content-container">
+    <header>
+        <h1><center>CSC 317</center></h1>
+        <p><center>Working towards a final project!</center></p>
+    </header>
+
+        <nav>
+            <ul>
+                <li> <a href="index.html"> Index</a> </li>
+                <li> <a href="login.html"> Login</a> </li>
+                <li> <a href="registration.html"> Registration</a> </li>
+                <li> <a href="postvideo.html"> Postvideo</a> </li>
+                <li> <a href="viewpost.html"> Viewpost</a> </li>
+                <li> <a href="profile.html"> Profile</a> </li>
+            </ul>
+        </nav> 
+   
+
+<main>
+    <h2>View Post Title</h2>
+    <p>Posted by: Original Author</p>
+    <p>Uploaded on: February 27, 2023</p>
+    <video src = "path/tovideo.mp4" controls > </video>
+
+    <h3>Comments Section</h3>
+    <div class = "input-group">
+        <label for = "description"  > Description: </label>
+        <textarea  
+            rows="5" 
+            cols="25" 
+            placeholder="This is the default text"
+            class = "input-text"
+            id = "description" 
+            name = "description" required
+        > </textarea>
+        </div>
+
+        <div>
+            <input 
+                class = "form-button"
+                type = submit 
+                value = "Submit" />
+        </div>
+        
+    <ul class = "comments-section">
+        <li>Comment 1</li>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores iusto facilis dignissimos omnis ab accusamus perferendis sit ipsam quas dolor eveniet, ut soluta quae placeat aliquam molestias, illum, voluptatibus necessitatibus!</p>
+        <p> Author: Lorem Creator</p>
+        <li>Comment 2</li>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores iusto facilis dignissimos omnis ab accusamus perferendis sit ipsam quas dolor eveniet, ut soluta quae placeat aliquam molestias, illum, voluptatibus necessitatibus!</p>
+        <p> Author: Lorem Creator</p>
+        <li>Comment 3</li>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores iusto facilis dignissimos omnis ab accusamus perferendis sit ipsam quas dolor eveniet, ut soluta quae placeat aliquam molestias, illum, voluptatibus necessitatibus!</p>
+        <p> Author: Lorem Creator</p>
+    </ul>
+</main>
+</div>
+
+
+<footer class = "site-footer">
+    <address>
+        1600 Halloway Avenue <br /> 
+        San Francisco, CA 94132 <br />
+    </address>
+    ©2023 Amandeep Singh <br />
+    Updated: 2/22/2023
+</footer>
+</body>
+</html>

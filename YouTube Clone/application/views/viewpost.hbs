@@ -1,0 +1,102 @@
+<main>
+    <h2>{{currentPost.title}}</h2>
+    <p>Posted by: {{currentPost.username}}</p>
+    <p>Uploaded at: {{currentPost.createdAt}}</p>
+    <div class = "video-container">
+    <video src = "/{{currentPost.video}}" controls > </video>
+    {{log this}}
+    <p>Description: {{currentPost.description}}</p>
+    </div>
+   
+    <h3>Comments Section</h3>
+    <div class = "input-group">
+        <label for = "description"  > Description: </label>
+        <textarea  
+            rows="5" 
+            cols="25" 
+            placeholder="This is the default text"
+            class = "input-text"
+            id = "description" 
+            name = "description" required
+        > </textarea>
+        </div>
+
+        <div>
+            <input 
+                id = "comment-button"
+                class = "form-button"
+                type = submit 
+                value = "Submit"
+                data-postid="{{currentPost.id}}" />
+        </div>
+        
+    <ul class = "comments-section">
+        {{#each currentPost.comments}}
+        <div class = "comments-section">
+            <strong class = "comment-author">
+                {{this.username}}
+            </strong>
+            <span class = "comment-date">{{this.createdAt}}</span>
+            <div class = "comment-text">{{this.text}}</div>
+        </div>
+        {{/each}}
+    </ul>
+<script>
+document.getElementById('comment-button').addEventListener('click',function(ev){
+    ev.preventDefault();
+
+    let commentButton = ev.target;
+    let commentText = document.getElementById("description").value;
+    
+    let username = 'username'; 
+
+    if(!commentText) return;
+
+    var postId = ev.currentTarget.dataset.postid;
+
+    // Disable the submit button
+    commentButton.disabled = true;
+
+    // Assume that the comment will be successfully processed and immediately add it to the comments section
+    var commentSection = document.querySelector('.comments-section');
+    var newComment = document.createElement('div');
+    newComment.className = 'comment';
+    newComment.innerHTML = `
+        <strong class = "comment-author">${username}</strong>
+        <span class = "comment-date">${new Date().toLocaleString()}</span>
+        <div class = "comment-text">${commentText}</div>
+    `;
+    commentSection.appendChild(newComment);
+
+    fetch("/comments/create", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            postId: postId,
+            comment: commentText
+        })
+    })
+    .then(response => {
+        if(response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Something went wrong');
+        }
+    })
+    .then(data => {
+        console.log(data);
+        // Clear the input field
+        document.getElementById("description").value = "";
+        // Re-enable the submit button
+        commentButton.disabled = false;
+    })
+    .catch(error => {
+        console.log('Error:', error);
+        // Re-enable the submit button in case of error
+        commentButton.disabled = false;
+    });
+});
+</script>
+</main>

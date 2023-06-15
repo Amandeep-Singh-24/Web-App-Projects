@@ -1,0 +1,38 @@
+<main>
+    <h3>User Profile</h3>
+    <p><strong>Username: </strong>{{user.username}}</p>
+    <p><strong>Email: </strong>{{user.email}}</p>
+    <h4>{{user.username}}'s Posts</h4>
+    <div id="photo-container">
+        {{#each userPosts}}
+        <div class="photo-container">
+            <a class="link-details" href="/posts/{{this.id}}">
+                <img class="photo" src="/{{thumbnail}}">
+            </a>
+            <p>{{this.title}}</p>
+            <button class="delete-post" data-post-id="{{this.id}}">Delete</button>
+        </div>
+        {{/each}}
+    </div>
+
+    <script>
+        // Add a script for the delete button
+        const deleteButtons = document.querySelectorAll('.delete-post');
+
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const postId = e.target.getAttribute('data-post-id');
+                fetch(`/posts/delete/${postId}`, {
+                    method: 'DELETE',
+                }).then(response => {
+                    if(response.ok) {
+                        // remove post from DOM or refresh the page
+                        location.reload();
+                    } else {
+                        console.error('Failed to delete post');
+                    }
+                });
+            });
+        });
+    </script>
+</main>

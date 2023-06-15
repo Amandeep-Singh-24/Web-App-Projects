@@ -1,0 +1,55 @@
+<main>
+    <section>
+        <h3>Post a Video</h3>
+        <form class = "all-input"
+        action="/posts/create"
+        method="POST"
+        enctype="multipart/form-data">
+            <div class = "input-group">
+                <label for = "title" > Title: </label>
+                <input 
+                class = "input-text" 
+                name = "title" 
+                required id = "title" 
+                placeholder="Title" />
+            </div> 
+
+            <div class = "input-group">
+            <label for = "description"  > Description: </label>
+            <textarea  
+                rows="5" 
+                cols="30" 
+                placeholder="This is the default text"
+                class = "input-text"
+                id = "description" 
+                name = "description" required
+            > </textarea>
+            </div>
+            
+            <div>
+            <label for = "video" > Video: </label>
+            <input 
+                class = "form-button" 
+                type = "file" 
+                name = "uploadVideo" 
+                id = "video" 
+                accept="video/*" required />
+            </div>
+
+            <div class = "checkbox-group">
+            <label for = "policy">
+            <input type = "checkbox" id = "policy" name = "policy" required />
+            I agree to the Acceptable Use Policy for uploading videos.
+            </label>
+            </div>
+
+            <div>
+                <input 
+                    class = "form-button"
+                    type = submit 
+                    value = "Submit" />
+            </div>
+
+        </form>
+    </section>
+</main>

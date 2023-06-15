@@ -1,0 +1,37 @@
+    <main>
+        <h3>Login Form</h3>
+        <form class = "all-input"  action = "/users/login" 
+        method = "POST"
+        enctype="application/x-www-form-urlencoded">
+            <div class = "input-group">
+            <label for = "username" > Username </label>
+            <input 
+                class = "input-text"  
+                name = "username" 
+                id = "username" 
+                placeholder = "Username" />
+            </div>
+
+            <div class = "input-group">
+            <label for = "password" > Password </label>
+            <input 
+                class = "input-text"
+                type = "password" 
+                name = "password" 
+                id = "password" 
+                placeholder = "Password" />
+            </div>
+
+            <div>
+                <input 
+                    class = "form-button"
+                    type = submit 
+                    value = "Log In" />
+            </div>
+
+            <div>
+                Dont Have An Account?
+                <a href="/registration">  Register Here!</a>
+            </div>
+        </form>
+    </main>

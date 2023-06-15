@@ -1,0 +1,270 @@
+*
+*::after
+*::before{
+  box-sizing: border-box;
+}
+
+
+html{
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: black;
+}
+
+
+body {
+  height: auto;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  background-color: cornsilk;
+}
+
+.content-container{
+  padding-top: 120px;
+}
+  
+
+.input-group{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 50%;
+  padding: 4px;
+}
+
+form{
+  display: grid;
+  grid-auto-flow: rows;
+  gap: 8px;
+  width: 50%;
+}
+
+.input-text{
+  padding: 3px 7px;
+  border: 1px solid #cacacaca;
+  border-radius: 16px;
+  box-shadow: -2px 2px 10px gray;
+
+}
+
+input[type='file']{
+  border: 1px solid #cacacaca;
+  border-radius: 16px;
+  box-shadow: -2px 2px 10px gray;
+}
+
+nav ul{
+  flex-direction: row;
+  background-color: cornsilk;
+  text-align: center;
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  gap: .5em;
+}
+
+nav{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: cornsilk; /* Or any color you want for the nav background */
+z-index: 100; /* This is to ensure the navbar stays on top of other elements */
+}
+
+nav li{
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: .35rem;
+  padding: 6px 6px;
+  flex: 1 auto;
+  font-family: monospace;
+}
+
+
+nav a{
+  text-align: center;
+  color: blue;
+  width: auto;
+  height: auto;
+}
+
+.form-button{
+  border: none;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 18px gray;
+}
+
+.comments-section{
+  border: 2px solid black;
+  padding: 18px;
+  margin-left: -4px;
+}
+
+.comments-section2{
+  border: 2px solid black;
+  padding-left: 18px;
+  padding-bottom: 8px;
+}
+
+.all-input{
+  box-sizing: border-box;
+  border: 2px solid black;
+  padding: 16px;
+  margin: 16px auto;
+  width: 80%;
+}
+
+header{
+  text-align: center;
+  background-color: ghostwhite;
+  border-bottom: 2px solid #7F8C8D;
+  color: black;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: .35rem;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 6px;
+  font-family: cursive;
+}
+
+
+main{
+  padding: 8px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  flex: 1;
+  border-top: 2px dashed black;
+  font-family: monospace;
+}
+
+h1{
+  margin: 0;
+}
+
+a {
+  color: rgb(0, 183, 255);
+}
+
+.site-footer{
+  background-color: ghostwhite;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.error{
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photo-container {
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  transition: opacity 1s;
+  display: inline-block;
+}
+
+.photo {
+  width: 100%;
+}
+
+.alert-danger {
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.alert-success {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-text {
+  margin-right: 5px;
+  padding: 3px 7px;
+  border: 1px solid black;
+  border-radius: 16px;
+  width: 500px;
+}
+
+.search-button {
+  padding: 5px 10px; 
+  border: 1px solid black; 
+  background-color: white; 
+  color: black;
+  cursor: pointer; 
+  border-radius: 16px;
+}
+
+/* Change the appearance of the button when it's hovered over */
+.search-button:hover {
+  background-color: #ddd; /* adjust hover background color as needed */
+}
+
+.video-container {
+  width: 100%;
+  max-width: 900px; /* Adjust this value based on your needs */
+  margin: 0 auto;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+}
+
+.comments-section {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.comments-section div {
+  border: 1px solid #ddd;
+  background-color: #f6f6f6;
+  padding: 10px;
+  margin-bottom: 3px;
+  border-radius: 5px;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #333;
+}
+
+.comment-date {
+  float: right;
+  font-size: 0.8em;
+  color: #777;
+}
+
+.comment-text {
+  clear: both;
+  margin-top: 5px;
+  color: #555;
+}

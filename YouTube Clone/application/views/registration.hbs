@@ -1,0 +1,72 @@
+<main>
+    <h3>Account Creation</h3>
+        <form class = "all-input" id = "registration-form" 
+        action = "/users/registration" 
+        method = "POST"
+        enctype="application/x-www-form-urlencoded" > 
+            <div class = "input-group">
+                <label for = "email" > Email </label>
+                <input 
+                    class = "input-text"  
+                    name = "email"
+                    type = "email" 
+                    id = "email" 
+                    placeholder = "Email"
+                    />
+            </div>
+
+            <div class = "input-group">
+                <label for = "username" > Username </label>
+                <input 
+                    class = "input-text" 
+                    name = "username" 
+                    id = "username" 
+                    placeholder = "Username" 
+                    oninput="validateUsername()"/>
+                    <div id = "usernameError" class = "error"></div>
+            </div>
+
+            <div class = "input-group">
+                <label for = "password" > Password </label>
+                <input 
+                    class = "input-text" 
+                    type = "password"
+                    name = "password" 
+                    id = "password"
+                    placeholder = "Password"
+                    oninput="validatePassword()" />
+                    <div id = "passwordError" class = "error"></div>
+            </div>
+
+            <div class = "input-group">
+                <label for = "confirm-password" > Confirm Password </label>
+                <input 
+                    class = "input-text"
+                    type = "password"  
+                    name = "confirm_password" 
+                    id = "confirm-password" 
+                    placeholder="Confirm Password"
+                    oninput = "validateConfirmPassword()"
+                    />
+                    <div id = "confirmPasswordError" class = "error"></div> 
+            </div>
+
+            <div class = "checkbox-group">
+                <label for = "Age Check" > Are you 13 years or older? </label>
+                <input type = "checkbox" name = "Age_Check" required id = "Age Check" placeholder="Age Check" />
+            </div>
+
+            <div class = "checkbox-group">
+                <label for = "TOS Privacy Check" > Do you accept the <a href = "N/A Link" > Terms of Services and Privacy</a> agreements?</label>
+                <input type = "checkbox" name = "TOS_Privacy_Check" required id = "TOS/Privacy Check" placeholder="TOS/Privacy Check" />
+            </div>
+
+            <div>
+                <input 
+                    class = "form-button"
+                    type = "submit"
+                    value = "Submit" />
+            </div>
+        </form>
+        <br />
+</main>

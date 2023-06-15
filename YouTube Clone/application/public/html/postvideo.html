@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "../css/style.css">
+    <title>Post Video</title>
+</head>
+<body>
+    <div class = "content-container">
+    <header>
+        <h1><center>CSC 317</center></h1>
+        <p><center>Working towards a final project!</center></p>
+     </header>
+
+        <nav>
+            <ul>
+                <li> <a href="index.html"> Index</a> </li>
+                <li> <a href="login.html"> Login</a> </li>
+                <li> <a href="registration.html"> Registration</a> </li>
+                <li> <a href="postvideo.html"> Postvideo</a> </li>
+                <li> <a href="viewpost.html"> Viewpost</a> </li>
+                <li> <a href="profile.html"> Profile</a> </li>
+            </ul>
+        </nav>
+   
+<main>
+    <section>
+        <h3>Post a Video</h3>
+        <form class = "all-input">
+            <div class = "input-group">
+                <label for = "title" > Title: </label>
+                <input 
+                class = "input-text" 
+                name = "title" 
+                required id = "title" 
+                placeholder="Title" />
+            </div> 
+
+            <div class = "input-group">
+            <label for = "description"  > Description: </label>
+            <textarea  
+                rows="5" 
+                cols="30" 
+                placeholder="This is the default text"
+                class = "input-text"
+                id = "description" 
+                name = "description" required
+            > </textarea>
+            </div>
+            
+            <div>
+            <label for = "video" > Video: </label>
+            <input 
+                class = "form-button" 
+                type = "file" 
+                name = "video" 
+                id = "video" 
+                accept="video/*" required />
+            </div>
+
+            <div class = "checkbox-group">
+            <label for = "policy">
+            <input type = "checkbox" id = "policy" name = "policy" required />
+            I agree to the Acceptable Use Policy for uploading videos.
+            </label>
+            </div>
+
+            <div>
+                <input 
+                    class = "form-button"
+                    type = submit 
+                    value = "Submit" />
+            </div>
+
+        </form>
+    </section>
+</main>
+<br />
+    </div>
+
+
+<footer class = "site-footer">
+    <address>
+        1600 Halloway Avenue <br /> 
+        San Francisco, CA 94132 <br />
+    </address>
+    ©2023 Amandeep Singh <br />
+    Updated: 2/22/2023
+</footer>
+</body>
+
+</html>

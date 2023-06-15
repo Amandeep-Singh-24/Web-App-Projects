@@ -1,0 +1,11 @@
+<main id="photo-container">  
+  <h2>Results Based off your search:</h2>
+  {{#each posts}}
+    <div class="photo-container">
+        <a class = "link-details" href="/posts/{{this.id}}">
+      <img class="photo" src="/{{thumbnail}}">
+        </a>
+      <p>{{title}}</p>
+    </div>
+  {{/each}}
+</main>
